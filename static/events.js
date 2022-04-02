@@ -6,7 +6,6 @@ window.addEventListener('load', () => {
         socket.emit('generate', collectData(), (response) => {
             resultBody.innerHTML = '';
             response.forEach((obj) => {
-                console.log(obj)
                 let row = document.createElement('tr')
                 row.append(createColumnElement(obj['surname']));
                 row.append(createColumnElement(obj['name']));
